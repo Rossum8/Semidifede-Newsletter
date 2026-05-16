@@ -1,0 +1,68 @@
+# Semidifede Weekly - Automated Newsletter Architecture Plan
+
+This plan outlines the architecture and workflow to build a fully automated, AI-driven newsletter for "semidifede", modeled after the ASSIST Weekly approach. The goal is to maximize automation (autonomous content generation from ingested sources) while requiring only manual revision and approval before sending.
+
+## Overview of the Pipeline
+
+The system will consist of a scheduled backend script (e.g., Python) that executes a 4-step pipeline:
+1. **Ingestion**: Fetch content from predefined Catholic sources.
+2. **AI Curation & Generation**: Use the Gemini API to filter, score, categorize, and summarize the content.
+3. **Drafting**: Assemble the content into a formatted newsletter and create a draft on your chosen platform.
+4. **Review & Distribution**: You manually review the draft and click "Send".
+
+---
+
+> [!IMPORTANT]
+> ## User Review Required & Open Questions
+> Before we start coding, I need your input on a few key decisions:
+>
+> 1. **Email/Newsletter Platform**: Where will the newsletter be sent from? ASSIST Weekly uses **Brevo** (formerly Sendinblue). Other popular options are **Substack** (great for newsletters, has an API for drafts), **Mailchimp**, or **Beehiiv**. We could also just create a **Gmail draft** or a **Google Doc** for you to copy-paste. Which do you prefer?
+> 2. **Data Sources**: What exact sources should the AI ingest? 
+>    - e.g., Vatican News RSS, specific Catholic blogs, USCCB daily readings?
+>    - For the Catechism: Do you have a specific PDF/text, or should the AI query it dynamically?
+> 3. **Landing Page**: Do you want me to build a landing page similar to `assistweekly.org` to collect subscriber emails? If so, we can build a static site and host it for free on GitHub Pages.
+> 4. **Hosting the Automation**: Do you want to run this Python script locally on your Windows machine (e.g., a scheduled task that runs every Thursday morning), or do you want to deploy it to the cloud (e.g., Google Cloud Functions / GitHub Actions) so it runs even if your PC is off?
+
+---
+
+## Proposed Architecture
+
+### 1. Data Ingestion Module (Python)
+A script that pulls fresh content on a weekly basis.
+- **Sources**: RSS Feeds (News, Liturgy), Web Scraping (Catholic Tools/Apps), and static files (Catechism).
+- **Tooling**: `feedparser` for RSS, `beautifulsoup4` for web scraping.
+
+### 2. AI Processing Engine (Gemini API)
+The core intelligence of the newsletter.
+- **Input**: The raw ingested text from the past week.
+- **Prompting Strategy**: We will instruct Gemini (using `google-generativeai`) to act as the "Semidifede Editor".
+- **Tasks**:
+  - **Filter**: Discard irrelevant or low-quality items.
+  - **Score**: Rank items based on relevance and usefulness (like ASSIST Weekly).
+  - **Summarize**: Write a concise, plain-English summary for each selected item.
+  - **Categorize**: Group into sections (e.g., *Catechism Insights*, *Catholic Tools*, *Weekly Readings*).
+
+### 3. Draft Generation & Review
+- The script takes Gemini's structured output (JSON) and renders it into a clean HTML or Markdown template.
+- It then uses the chosen platform's API (e.g., Brevo API or Substack API) to create a **Campaign Draft**.
+- **Alternative**: If using Google tools exclusively, we can use the Google Docs API to generate a formatted document, or the Gmail API to create a draft email.
+
+### 4. Landing Page (Frontend)
+- A clean, modern, minimal landing page modeled after ASSIST Weekly.
+- **Stack**: HTML, Vanilla CSS (or Tailwind if preferred).
+- **Features**: Value proposition, what to expect (Categories), and an email signup form integrated with your chosen platform.
+
+## Verification Plan
+
+### Phase 1: Prototype the AI Generation
+- Create a mock set of ingested data.
+- Write the Python script to call the Gemini API.
+- Verify the quality, tone, and formatting of the generated content.
+
+### Phase 2: Platform Integration
+- Set up the API connection to your chosen platform (e.g., Brevo).
+- Verify that the script successfully creates a formatted draft in your account without sending it.
+
+### Phase 3: Landing Page
+- Design and build the static landing page.
+- Verify the email signup form successfully adds users to your mailing list.

@@ -1,0 +1,51 @@
+# Semidifede Weekly - Automated Newsletter Architecture Plan
+
+This plan outlines the architecture and workflow to build a fully automated, AI-driven newsletter for "semidifede", modeled after the ASSIST Weekly approach. The goal is to maximize automation while keeping the entire stack **100% free** and optimizing for **Google Search ranking (SEO)**.
+
+## Core Decisions (Based on your feedback)
+
+1. **Automation Hosting**: **GitHub Actions** (100% Free). We will create a GitHub repository. A scheduled workflow will run our Python script automatically once a week.
+2. **Data Sources**: 
+   - A `raw/` folder in the GitHub repository where you can drop original text/documents.
+   - A list of trusted Catholic blogs and RSS feeds.
+3. **Landing Page**: **GitHub Pages** (100% Free). We will build a lightning-fast, SEO-optimized static HTML/CSS landing page to collect emails and rank highly on Google.
+4. **Email Platform**: **Brevo** (Free tier: 300 emails/day, easy API integration) or **Substack** (Free, best for SEO, but no official API so the script will generate a Markdown file that you copy-paste). We will design the script to output a Markdown draft by default.
+
+---
+
+## Proposed Architecture & Workflow
+
+### 1. The GitHub Repository (The Brain)
+We will create a private or public GitHub repository. It will contain:
+- A `raw/` directory: You upload any original content, catechism excerpts, or notes here throughout the week.
+- A `sources.json` file: A list of URLs for trusted blogs/RSS feeds.
+- The Python automation script.
+- The Landing Page code.
+
+### 2. Data Ingestion & AI Processing (GitHub Actions + Gemini)
+Every Thursday (or your preferred day), GitHub Actions will wake up and run the script:
+1. **Scrape & Read**: The script reads everything in the `raw/` folder and fetches the latest articles from the trusted blogs.
+2. **Gemini AI**: The script sends the text to the free Gemini API. Gemini acts as the "Semidifede Editor".
+3. **Curation**: Gemini filters, scores, and categorizes the content.
+4. **Draft Generation**: Gemini writes the plain-English summaries and formats the final newsletter.
+
+### 3. Review & Distribution
+- **The Output**: The script will save the finished newsletter as a Markdown (`.md`) and HTML file in a `drafts/` folder on GitHub.
+- **Notification**: GitHub Actions can send you a quick email (via a free Gmail SMTP) saying: *"Your draft is ready"*.
+- **Action**: You review the draft. If using Substack, you copy-paste the text and hit send. If using Brevo, the script can push it directly to your Brevo Drafts folder via their free API, so you just log in and click "Send".
+
+### 4. SEO-Optimized Landing Page (GitHub Pages)
+We will build a landing page similar to ASSIST Weekly:
+- **SEO Best Practices**: Proper `<title>`, `<meta name="description">`, semantic HTML5 tags (`<main>`, `<article>`), schema markup, and an optimized Lighthouse performance score to ensure Google ranks it highly.
+- **Form Integration**: An embedded signup form (Brevo or Substack) to collect subscriber emails directly on the page.
+
+---
+
+> [!IMPORTANT]
+> ## User Review Required
+> Please confirm this updated plan. Once approved, I will begin execution by:
+> 1. Setting up the project folder structure.
+> 2. Writing the core Python script for Data Ingestion and Gemini AI processing.
+> 3. Designing the SEO-optimized Landing Page.
+> 
+> *Note: For the Gemini API, you will need to generate a free API key at `aistudio.google.com` when we run the script.*
