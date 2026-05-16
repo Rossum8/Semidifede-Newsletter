@@ -1,10 +1,10 @@
 :root {
-    --primary: #2C3E50;
-    --accent: #D4AF37; /* A premium gold touch often used in Catholic contexts */
-    --bg-color: #FAFAFA;
-    --text-main: #333333;
-    --text-muted: #666666;
-    --card-bg: rgba(255, 255, 255, 0.85);
+    --primary: #3d97a7;
+    --accent: #d96483; /* A premium gold touch often used in Catholic contexts */
+    --bg-color: #f1e0db;
+    --text-main: #0000;
+    --text-muted: #3d97a7;
+    --card-bg: #e9c1cc;
 }
 
 * {
