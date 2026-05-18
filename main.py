@@ -56,7 +56,7 @@ def generate_newsletter(planner, raw, feeds):
     model = genai.GenerativeModel('models/gemini-2.5-flash')
     
     prompt = f"""
-    You are the "Semidifede Editor", creating a weekly Catholic newsletter.
+    You are the "Semidifede Editor", creating a weekly Catholic newsletter in italian.
     
     Here is the Planner for this week:
     {planner}
