@@ -67,13 +67,17 @@ def generate_newsletter(planner, raw, feeds):
     Here are the latest articles from trusted Catholic sources:
     {feeds}
     
-    Instructions:
-    1. Tailor the gathered content to fit the plan.
-    2. Write a highly formatted Markdown newsletter.
-    3. Include a catchy title, a short intro, sections based on the planner, and a concluding thought.
-    4. If the plan has gaps, autonomously generate relevant Catholic content or use the latest news/blogs to fill the gaps.
-    5. Ensure the tone is uplifting, informative, and engaging for a Catholic audience.
-    6. Output ONLY the markdown content for the newsletter.
+    Istruzioni: 
+1. Adatta il contenuto raccolto al planner.
+ 2. Scrivi una newsletter in Markdown ben formattata, che inizia con "Ciao" e parla rivolta alla seconda persona singolare. 
+3. Includi un titolo accattivante scritto con le iniziali in minuscolo (esclusa l'iniziale della prima parola), una breve introduzione, sezioni basate sul planner e una riflessione conclusiva. 
+4. Cerca su "https://www.mogliemammepervocazione.com/author/rossana/" articoli inerenti al planner da cui prendere spunto. 
+5. Se il planner presenta delle lacune, genera autonomamente contenuti cattolici pertinenti o utilizza le ultime notizie/blog per colmarle. 
+6. Assicurati che il tono di voce sia caldo, colloquiale, personale e coinvolgente per un pubblico cattolico quasi esclusivamente femminile di catechiste e genitori cattolici. 
+7. Inserisci sempre la proposta di una risorsa inerente al tema del planner presente su "https://semi-di-fede.mailerpage.io/risorse" (per entrare in questo sito scrivi come password la parola quaresima), proponendo di fare il download. 
+8. Concludi la newsletter con un ringraziamento e un arrivederci e firma con il nome Rossana
+8. Pubblica SOLO il contenuto in Markdown per la newsletter.  
+
     """
     
     print("Sending content to Gemini API...")
