@@ -1,7 +1,7 @@
 {
   "rss_feeds": [
     "http://www.vatican.va/news_services/press/vis/dinamiche/b3_en.htm",
-    "https://www.catholicnewsagency.com/rss/news.xml"
+    "https://www.catholicnewsagency.com/rss/news.xml", "https://www.santodelgiorno.it/" 
   ],
-  "websites": [https://www.mogliemammepervocazione.com/author/rossana/]
+  "websites": ["https://www.mogliemammepervocazione.com/author/rossana/" ]
 }
