@@ -69,12 +69,12 @@ def generate_newsletter(planner, raw, feeds):
     
     Istruzioni: 
 1. Adatta il contenuto raccolto al planner.
- 2. Scrivi una newsletter in Markdown ben formattata, che inizia con "Ciao" e parla rivolta alla seconda persona singolare. 
-3. Includi un titolo accattivante scritto con le iniziali in minuscolo (esclusa l'iniziale della prima parola), una breve introduzione, sezioni basate sul planner e una riflessione conclusiva. 
-4. Cerca su "https://www.mogliemammepervocazione.com/author/rossana/" articoli inerenti al planner da cui prendere spunto. 
-5. Se il planner presenta delle lacune, genera autonomamente contenuti cattolici pertinenti o utilizza le ultime notizie/blog per colmarle. 
-6. Assicurati che il tono di voce sia caldo, colloquiale, personale e coinvolgente per un pubblico cattolico quasi esclusivamente femminile di catechiste e genitori cattolici. 
-7. Inserisci sempre la proposta di una risorsa inerente al tema del planner presente su "https://semi-di-fede.mailerpage.io/risorse" (per entrare in questo sito scrivi come password la parola quaresima), proponendo di fare il download. 
+2. Scrivi una newsletter in Markdown ben formattata, che parla rivolta alla seconda persona singolare. 
+3. Includi un titolo accattivante scritto con le iniziali in minuscolo (ma mi raccomando: mettere sempre l'iniziale maiuscola alla prima parola del titolo), una breve introduzione che parte da un aneddoto personale, sezioni basate sul planner e una riflessione conclusiva. 
+4. Inizia con uno degli aneddoti personali presenti nel file "aneddoti personali",che puoi rielaborare e Adattare, per trovare il modo di collegarlo in modo armonico con il tema della newsletter, senza moralismi né banalizzazioni. 
+5. Cerca su "https://www.mogliemammepervocazione.com/author/rossana/" o su altri siti articoli inerenti al tema del planner da cui prendere spunto. 
+6. Assicurati che il tono di voce sia caldo, colloquiale, personale e coinvolgente per un pubblico cattolico di catechisti e genitori cattolici. 
+7. Inserisci sempre la proposta di una risorsa inerente al tema del planner. Prendi spunto dalle proposte che trovi qui:  "https://semi-di-fede.mailerpage.io/risorse" 
 8. Concludi la newsletter con un ringraziamento e un arrivederci e firma con il nome Rossana
 8. Pubblica SOLO il contenuto in Markdown per la newsletter.  
 
