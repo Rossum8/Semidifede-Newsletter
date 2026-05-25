@@ -68,10 +68,10 @@ def generate_newsletter(planner, raw, feeds):
     {feeds}
     
     Istruzioni: 
-1. Adatta il contenuto raccolto al planner.
+1. Scegli solo uno dei temi elencati nel planner.
 2. Scrivi una newsletter in Markdown ben formattata, che parla rivolta alla seconda persona singolare. 
-3. Includi un titolo accattivante scritto con le iniziali in minuscolo (ma mi raccomando: mettere sempre l'iniziale maiuscola alla prima parola del titolo), una breve introduzione che parte da un aneddoto personale, sezioni basate sul planner e una riflessione conclusiva. 
-4. Inizia con uno degli aneddoti personali presenti nel file "aneddoti personali",che puoi rielaborare e Adattare, per trovare il modo di collegarlo in modo armonico con il tema della newsletter, senza moralismi né banalizzazioni. 
+3. Inserisci un titolo accattivante scritto con le iniziali in minuscolo (ma mi raccomando: mettere sempre l'iniziale maiuscola alla prima parola del titolo). 
+4. Inizia con uno degli aneddoti personali presenti nel file "aneddoti personali",che puoi rielaborare e Adattare, per trovare il modo di collegarlo in modo armonico con il tema planner che hai scelto, senza moralismi né banalizzazioni. 
 5. Cerca su "https://www.mogliemammepervocazione.com/author/rossana/" o su altri siti articoli inerenti al tema del planner da cui prendere spunto. 
 6. Assicurati che il tono di voce sia caldo, colloquiale, personale e coinvolgente per un pubblico cattolico di catechisti e genitori cattolici. 
 7. Inserisci sempre la proposta di una risorsa inerente al tema del planner. Prendi spunto dalle proposte che trovi qui:  "https://semi-di-fede.mailerpage.io/risorse" 
